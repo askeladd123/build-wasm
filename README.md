@@ -7,7 +7,6 @@ You need the rust package manager and build tool [cargo](https://www.rust-lang.o
 To use, you have to options; build executable or run from source.
 
 ### build executable
-This has 
 - run `cargo build --release`
 - grab `./target/release/build-wasm.exe` and put it in your project folder, the one where you have `Cargo.toml`
 - go to your project folder and run `build-wasm.exe` in the commandline, in *powershell*: `.\build-wasm.exe`
@@ -50,5 +49,3 @@ This code loads javascript glue code which in turn loads the webassembly you wro
 - [npm http-server](https://www.npmjs.com/package/http-server)
 - [python http.server](https://docs.python.org/3/library/http.server.html)
 - [vscode Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-
----
