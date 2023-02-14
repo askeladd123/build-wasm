@@ -25,10 +25,10 @@ You can make this command shorter by creating a cargo alias.
 
 ```toml
 [alias]
-build-web = "run --manifest-path build-web/Cargo.toml --"
+build-wasm = "run --manifest-path build-wasm/Cargo.toml --"
 ```
 
-You can now type `cargo build-web` instead.
+You can now type `cargo build-wasm` instead.
 
 ## run in browser
 To run your webassembly in the browser you have to load it from a *html* file. Make a `index.html` and put in the code below.
