@@ -156,7 +156,10 @@ pub fn run(args: impl IntoIterator<Item = String>) {
             let f = val.unwrap();
 
             let name = f.file_name().into_string().unwrap();
-            if name.contains("index.html") || name.contains("dist") || name.contains(".git") {
+            if name.contains("index.html")
+                || name.contains("dist")
+                || name.contains(".git") && !name.contains(".gitignore")
+            {
                 continue;
             }
 
