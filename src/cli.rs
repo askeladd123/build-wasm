@@ -15,7 +15,7 @@ fn error(msg: impl Display) {
 fn ok(msg: impl Display) {
     println!("\x1b[32msuccess: \x1b[0m{msg}")
 }
-pub fn run(args: impl IntoIterator<Item = String>) {
+pub fn run<'a>(args: impl IntoIterator<Item = &'a str>) {
     let mut release = false;
     let mut clean = false;
     let mut rm_src = false;
