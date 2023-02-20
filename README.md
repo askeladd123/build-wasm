@@ -4,7 +4,7 @@ A Command Line Interface for building web ready WebAssembly from Rust. It takes 
 ## how to use
 You need the rust package manager and build tool [cargo](https://www.rust-lang.org/tools/install) to make an executable. 
 
-To use, you have to options; build executable or run from source.
+To use, you have three options; build executable, run from source or use as library.
 
 ### build executable
 - run `cargo build --release`
@@ -29,6 +29,18 @@ build-wasm = "run --manifest-path build-wasm/Cargo.toml --"
 ```
 
 You can now type `cargo build-wasm` instead.
+
+### use as library
+The CLI can be used as a rust library as well. Inside `lib.rs` you can find the public API. Example use `Cargo.toml`:
+```toml
+[dependencies]
+build-wasm = {git = "https://github.com/askeladd123/build-wasm.git"}
+```
+
+Example in a rust file:
+```rust
+build_wasm::run(["--clean", "--release"]);
+```
 
 ## run in browser
 To run your webassembly in the browser you have to load it from a *html* file. Make a `index.html` and put in the code below.
