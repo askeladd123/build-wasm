@@ -159,6 +159,7 @@ pub fn run<'a>(args: impl IntoIterator<Item = &'a str>) {
             if name.contains("index.html")
                 || name.contains("dist")
                 || name.contains(".git") && !name.contains(".gitignore")
+                || name.contains("assets")
             {
                 continue;
             }
