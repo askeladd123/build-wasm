@@ -158,7 +158,7 @@ pub fn run<'a>(args: impl IntoIterator<Item = &'a str>) {
             let name = f.file_name().into_string().unwrap();
             if name.contains("index.html")
                 || name.contains("dist")
-                || name.contains(".git") && !name.contains(".gitignore")
+                || name.contains(".git") && !name.contains(".gitignore") && !name.contains(".gitattributes")
             {
                 continue;
             }
